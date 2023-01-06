@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Đăng nhập - Shoes Shop</title>
 
     <!-- Custom fonts for this template-->
     <link href="./template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
