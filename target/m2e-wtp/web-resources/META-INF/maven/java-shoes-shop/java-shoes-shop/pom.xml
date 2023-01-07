@@ -52,10 +52,15 @@
 			<version>2.4.2</version>
 		</dependency>
 
-		<repository>
-			<id>OSS</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</repository>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.13</version>
+		</dependency>
+
+
+	
 
 	</dependencies>
 

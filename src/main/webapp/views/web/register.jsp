@@ -36,45 +36,38 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            	<img  class="col-lg-6 d-none d-lg-block" src="./images/web/login.png" />
+                            	<img  class="col-lg-6 d-none d-lg-block" src="./images/web/register.png" />
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Đăng nhập</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Đăng ký</h1>
                                     </div>
-                                    <form class="user" action="dang-nhap" method="POST">
+                                    <form class="user" action="dang-ky" method="POST">
+                                    	<div class="form-group">
+                                            <input type="text" name="name" class="form-control form-control-user" placeholder="Tên người dùng">
+                                        </div>
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Mật khẩu">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Ghi nhớ tài khoản</label>
-                                            </div>
+                                                placeholder="Mật khẩu">
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Đăng nhập
+                                            Đăng ký
                                         </button>
                                         <hr>
                                         <a href="trang-chu" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Đăng nhập bằng Google
+                                            <i class="fab fa-google fa-fw"></i> Đăng ký bằng Google
                                         </a>
                                         <a href="trang-chu" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Đăng nhập bằng Facebook
+                                            <i class="fab fa-facebook-f fa-fw"></i> Đăng ký bằng Facebook
                                         </a>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="trang-chu">Quên mật khẩu?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="dang-ky">Đăng ký tài khoản!</a>
+                                        <a class="small" href="dang-nhap">Đã có tài khoản? Đăng nhập!</a>
                                     </div>
                                 </div>
                             </div>

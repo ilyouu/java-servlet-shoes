@@ -1,50 +1,42 @@
 package web.controller;
 
 import java.io.IOException;
-import java.util.List;
+import java.sql.SQLException;
 
 import dao.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import model.User;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;
 
-@WebServlet(urlPatterns = "/dang-nhap")
-public class LoginController extends HttpServlet {
+@WebServlet(urlPatterns = "/dang-ky")
+public class RegisterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UserDAO userDAO;
-	
-    public LoginController() {
+    
+    public RegisterController() {
         super();
         userDAO = new UserDAO();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("views/web/login.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("views/web/register.jsp");
 		dispatcher.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		HttpSession session = request.getSession();
-		
-		if (email.equals("admin@gmail.com") && password.equals("admin")) {
-			response.sendRedirect("admin-shoes");
-			session.setAttribute("user", "Admin");
-		} else {
-			List<User> users = userDAO.selectAll();
-			for (User user : users) {
-				if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-					session.setAttribute("user", user.getTen_nguoi_dung());
-				}
-			}
-			response.sendRedirect("trang-chu");
+		User user = new User(name, email, password, "user");
+		try {
+			userDAO.insert(user);
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
+		response.sendRedirect("dang-nhap");
 	}
-
 }
