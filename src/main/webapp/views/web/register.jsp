@@ -44,15 +44,15 @@
                                     </div>
                                     <form class="user" action="dang-ky" method="POST">
                                     	<div class="form-group">
-                                            <input type="text" name="name" class="form-control form-control-user" placeholder="Tên người dùng">
+                                            <input type="text" name="name" class="form-control form-control-user" placeholder="Tên người dùng" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
-                                                placeholder="Email">
+                                                placeholder="Email" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                placeholder="Mật khẩu">
+                                                placeholder="Mật khẩu" required>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Đăng ký

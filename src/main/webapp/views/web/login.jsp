@@ -46,11 +46,11 @@
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Email">
+                                                placeholder="Email" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Mật khẩu">
+                                                id="exampleInputPassword" placeholder="Mật khẩu" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">

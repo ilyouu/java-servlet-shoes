@@ -10,7 +10,7 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
-  <display-name>java-shoes-shop</display-name>
+  <display-name>java-servlet-shoes-shop</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
